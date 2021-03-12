@@ -12,9 +12,7 @@ pipeline {
                 }
             }
         }
-    }
 
-    stages {
         stage('build') {
             steps("run frontend") {
                echo 'building the application....'
@@ -26,7 +24,7 @@ pipeline {
             }
         }
 
-    stage('test') {
+        stage('test') {
             steps {
                script {
                    gv.testapp()
@@ -34,7 +32,7 @@ pipeline {
             }
         }
 
-    stage('deploy') {
+        stage('deploy') {
             steps {
                echo 'deploying the application'
                nodejs('Node-15.11') {
