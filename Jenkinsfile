@@ -4,8 +4,13 @@ pipeline {
 
     stages {
         stage('build') {
-            steps {
+            steps("run frontend") {
                echo 'building the application....'
+               echo 'executing npm'
+               nodejs('Nodejs 15.11.0') {
+                   sh 'npm install'
+               }
+
             }
         }
 
