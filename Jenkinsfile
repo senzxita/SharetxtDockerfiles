@@ -2,7 +2,7 @@ pipeline {
 
     agent any
 
-    stages{
+    stages {
         stage('build') {
             steps("run frontend") {
                echo 'building the application....'
@@ -16,8 +16,7 @@ pipeline {
 
         stage('test') {
             steps {
-               echo 'testing the application...'
-                                 
+               echo 'testing the application...'             
                }
             }
         }
