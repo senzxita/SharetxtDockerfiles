@@ -1,5 +1,3 @@
-def gv
-
 pipeline {
 
     agent any
@@ -18,9 +16,8 @@ pipeline {
 
         stage('test') {
             steps {
-               script {
-                   gv = load "script.groovy"
-                   gv.testapp()
+               echo 'testing the application...'
+                                 
                }
             }
         }
