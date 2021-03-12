@@ -35,8 +35,6 @@ pipeline {
         stage('deploy') {
             steps {
                echo 'deploying the application'
-               nodejs('Node-15.11') {
-                   sh 'npm install --production'
                }
             }
         }
