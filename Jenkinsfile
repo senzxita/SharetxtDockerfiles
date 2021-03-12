@@ -7,7 +7,7 @@ pipeline {
             steps("run frontend") {
                echo 'building the application....'
                echo 'executing npm'
-               nodejs('Nodejs 15.11.0') {
+               nodejs('Node-15.11') {
                    sh 'npm install'
                }
 
